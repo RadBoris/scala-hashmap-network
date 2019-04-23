@@ -6,7 +6,6 @@ import com.typesafe.config.ConfigFactory
 
 class ReduceActor extends Actor {
   var remainingMappers = ConfigFactory.load.getInt("number-mappers")
-  //var reduceMap = new HashMap[String, List[String]]
     var reduceMap = scala.collection.mutable.Map[String, List[String]]()
 
 
@@ -16,14 +15,10 @@ class ReduceActor extends Actor {
           val l = List(title)
               reduceMap.put(name, l)
           } else {
-              println("FOUND")
-              println(title)
               val n = reduceMap.get(name).get;
               val k = n :+ title
-              println(reduceMap.get(name).get)
               reduceMap.update(name, k)
           }
-
     case Flush =>
       remainingMappers -= 1
       if (remainingMappers == 0) {
