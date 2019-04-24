@@ -10,14 +10,17 @@ class ReduceActor extends Actor {
 
 
   def receive = {
+
     case Word(name, title) =>
       if (!reduceMap.keySet.exists(_==name)) {
           val l = List(title)
               reduceMap.put(name, l)
           } else {
               val n = reduceMap.get(name).get;
-              val k = n :+ title
-              reduceMap.update(name, k)
+              if (!n.contains(title)) {
+                val k = n :+ title
+                reduceMap.update(name, k)
+              }
           }
     case Flush =>
       remainingMappers -= 1

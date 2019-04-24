@@ -12,6 +12,7 @@ class MasterActor extends Actor {
 
   var reduceActors = List[ActorRef]()
   for (i <- 0 until numberReducers)
+
     reduceActors = context.actorOf(Props[ReduceActor], name = "reduce"+i)::reduceActors
 
   val mapActors = context.actorOf(RoundRobinPool(numberMappers).props(Props(classOf[MapActor], reduceActors)))

@@ -1,4 +1,7 @@
-[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/mapreduce/reduceactor.scala:27:49: not found: value l[0m
-[0m[[0m[31merror[0m] [0m[0m                            reduceMap.put(name, l)[0m
-[0m[[0m[31merror[0m] [0m[0m                                                ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/mapreduce/mapreduceapplication.scala:65:5: text is already defined as value text[0m
+[0m[[0m[31merror[0m] [0m[0mval text: String = Source.fromURL("http://reed.cs.depaul.edu/lperkovic/csc536/homeworks/gutenberg/pg580.txt").mkString[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/mapreduce/mapreduceapplication.scala:70:34: not found: value text2[0m
+[0m[[0m[31merror[0m] [0m[0mval content2: Content = Content (text2, "The Pickwick papers")[0m
+[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
