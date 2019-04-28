@@ -1,4 +1,4 @@
-package mapreduce
+package common
 
 import akka.actor.{Actor, ActorRef}
 
@@ -20,7 +20,7 @@ class MapActor(reduceActors: List[ActorRef]) extends Actor {
   def process(content: String, title: String) = {
     content.replaceAll("""[\p{Punct}&&[^.]]""", "")
     for (word <- content.split("[\\p{Punct}\\s]+"))
-      if ((!STOP_WORDS_LIST.contains(word)) && word.exists(_.isUpper)) {
+      if ((!STOP_WORDS_LIST.contains(word)) && word(0).isUpper) {
         var index = Math.abs((word.hashCode())%numReducers)
 	reduceActors(index) ! Word(word, title)
       }

@@ -1,12 +1,14 @@
-package mapreduce
+package client
 
 import akka.actor.{ActorSystem, Props}
-import scala.io.Source
+import com.typesafe.config.ConfigFactory
 
-object MapReduceApplication extends App {
 
-  val system = ActorSystem("MapReduceApp")
-  val master = system.actorOf(Props[MasterActor], name = "master")
+
+ object MapReduceClient extends App {
+	val system = ActorSystem("MapReduceClient", ConfigFactory.load.getConfig("client"));
+
+  	val master = system.actorOf(Props[MasterActor], name = "master")
 
 
 // val content: String = """Mr. Pickwick observed (says the secretary) that fame was dear to the

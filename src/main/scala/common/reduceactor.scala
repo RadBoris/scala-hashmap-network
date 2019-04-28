@@ -1,17 +1,18 @@
-package mapreduce
+package common
 
 import scala.collection.mutable.{ HashMap, MultiMap, Set, MutableList}
 import akka.actor.{Actor, ActorRef}
 import com.typesafe.config.ConfigFactory
 
 class ReduceActor extends Actor {
+
   var remainingMappers = ConfigFactory.load.getInt("number-mappers")
-    var reduceMap = scala.collection.mutable.Map[String, List[String]]()
+  var reduceMap = scala.collection.mutable.Map[String, List[String]]()
 
 
   def receive = {
 
-    case Word(name, title) =>
+    case Content(name, title) =>
       if (!reduceMap.keySet.exists(_==name)) {
           val l = List(title)
               reduceMap.put(name, l)

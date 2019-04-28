@@ -1,7 +1,130 @@
-[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/mapreduce/mapreduceapplication.scala:65:5: text is already defined as value text[0m
-[0m[[0m[31merror[0m] [0m[0mval text: String = Source.fromURL("http://reed.cs.depaul.edu/lperkovic/csc536/homeworks/gutenberg/pg580.txt").mkString[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/client/mapreduceclient.scala:3:8: not found: object akka[0m
+[0m[[0m[31merror[0m] [0m[0mimport akka.actor.{ActorSystem, Props}[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/client/mapreduceclient.scala:4:12: object typesafe is not a member of package com[0m
+[0m[[0m[31merror[0m] [0m[0mimport com.typesafe.config.ConfigFactory[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/client/mapreduceclient.scala:9:15: not found: value ActorSystem[0m
+[0m[[0m[31merror[0m] [0m[0m	val system = ActorSystem("MapReduceClient", ConfigFactory.load.getConfig("client"));[0m
+[0m[[0m[31merror[0m] [0m[0m	             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/client/mapreduceclient.scala:9:46: not found: value ConfigFactory[0m
+[0m[[0m[31merror[0m] [0m[0m	val system = ActorSystem("MapReduceClient", ConfigFactory.load.getConfig("client"));[0m
+[0m[[0m[31merror[0m] [0m[0m	                                            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/client/masteractor.scala:3:8: not found: object akka[0m
+[0m[[0m[31merror[0m] [0m[0mimport akka.actor.{Actor, ActorRef, Props, Address}[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/client/masteractor.scala:4:8: not found: object akka[0m
+[0m[[0m[31merror[0m] [0m[0mimport akka.routing.{Broadcast, RoundRobinPool, ConsistentHashingPool, ConsistentHashingRouter, ConsistentHashMapping}[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/client/masteractor.scala:5:8: not found: object akka[0m
+[0m[[0m[31merror[0m] [0m[0mimport akka.remote.routing.{RemoteRouterConfig}[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/client/masteractor.scala:7:12: object typesafe is not a member of package com[0m
+[0m[[0m[31merror[0m] [0m[0mimport com.typesafe.config.ConfigFactory[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/client/masteractor.scala:11:27: not found: type Actor[0m
+[0m[[0m[31merror[0m] [0m[0mclass MasterActor extends Actor {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/client/masteractor.scala:13:24: not found: value ConfigFactory[0m
+[0m[[0m[31merror[0m] [0m[0m  val numberMappers  = ConfigFactory.load.getInt("number-mappers")[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/client/masteractor.scala:14:25: not found: value ConfigFactory[0m
+[0m[[0m[31merror[0m] [0m[0m  val numberReducers  = ConfigFactory.load.getInt("number-reducers")[0m
+[0m[[0m[31merror[0m] [0m[0m                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/client/masteractor.scala:19:5: not found: value Address[0m
+[0m[[0m[31merror[0m] [0m[0m    Address ("akka", "MapReduceClient"),[0m
 [0m[[0m[31merror[0m] [0m[0m    ^[0m
-[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/mapreduce/mapreduceapplication.scala:70:34: not found: value text2[0m
-[0m[[0m[31merror[0m] [0m[0mval content2: Content = Content (text2, "The Pickwick papers")[0m
-[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/client/masteractor.scala:20:5: not found: value Address[0m
+[0m[[0m[31merror[0m] [0m[0m    Address("akka.tcp", "MapReduceServer", "127.0.0.1", "2552")[0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/client/masteractor.scala:24:20: not found: type ConsistentHashMapping[0m
+[0m[[0m[31merror[0m] [0m[0m  def hashMapping: ConsistentHashMapping = {[0m
+[0m[[0m[31merror[0m] [0m[0m                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/client/masteractor.scala:28:22: not found: value content[0m
+[0m[[0m[31merror[0m] [0m[0m  var reduceActors = content.actorOf(RemoteRouterConfig(ConsistentHashingPool(numberReducers, hashMapping = hashMapping), addresses)[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/client/masteractor.scala:28:38: not found: value RemoteRouterConfig[0m
+[0m[[0m[31merror[0m] [0m[0m  var reduceActors = content.actorOf(RemoteRouterConfig(ConsistentHashingPool(numberReducers, hashMapping = hashMapping), addresses)[0m
+[0m[[0m[31merror[0m] [0m[0m                                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/client/masteractor.scala:28:57: not found: value ConsistentHashingPool[0m
+[0m[[0m[31merror[0m] [0m[0m  var reduceActors = content.actorOf(RemoteRouterConfig(ConsistentHashingPool(numberReducers, hashMapping = hashMapping), addresses)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/client/masteractor.scala:28:95: value hashMapping_= is not a member of client.MasterActor[0m
+[0m[[0m[31merror[0m] [0m[0m  var reduceActors = content.actorOf(RemoteRouterConfig(ConsistentHashingPool(numberReducers, hashMapping = hashMapping), addresses)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/client/masteractor.scala:29:12: not found: value Props[0m
+[0m[[0m[31merror[0m] [0m[0m    .props(Props[ReduceActor]))[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/client/masteractor.scala:32:19: not found: value content[0m
+[0m[[0m[31merror[0m] [0m[0m  var mapActors = content.actorOf(RemoteRouterConfig(RoundRobinPool(numberMappers, hashMapping = hashMapping), addresses)[0m
+[0m[[0m[31merror[0m] [0m[0m                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/client/masteractor.scala:32:35: not found: value RemoteRouterConfig[0m
+[0m[[0m[31merror[0m] [0m[0m  var mapActors = content.actorOf(RemoteRouterConfig(RoundRobinPool(numberMappers, hashMapping = hashMapping), addresses)[0m
+[0m[[0m[31merror[0m] [0m[0m                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/client/masteractor.scala:32:54: not found: value RoundRobinPool[0m
+[0m[[0m[31merror[0m] [0m[0m  var mapActors = content.actorOf(RemoteRouterConfig(RoundRobinPool(numberMappers, hashMapping = hashMapping), addresses)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/client/masteractor.scala:32:84: value hashMapping_= is not a member of client.MasterActor[0m
+[0m[[0m[31merror[0m] [0m[0m  var mapActors = content.actorOf(RemoteRouterConfig(RoundRobinPool(numberMappers, hashMapping = hashMapping), addresses)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/client/masteractor.scala:33:12: not found: value Props[0m
+[0m[[0m[31merror[0m] [0m[0m    .props(Props(classOf[MapActor], reduceActors)))[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/common/mapactor.scala:3:8: not found: object akka[0m
+[0m[[0m[31merror[0m] [0m[0mimport akka.actor.{Actor, ActorRef}[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/common/mapactor.scala:5:54: not found: type Actor[0m
+[0m[[0m[31merror[0m] [0m[0mclass MapActor(reduceActors: List[ActorRef]) extends Actor {[0m
+[0m[[0m[31merror[0m] [0m[0m                                                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/client/masteractor.scala:35:17: missing parameter type for expanded function[0m
+[0m[[0m[31merror[0m] [0m[0mThe argument types of an anonymous function must be fully known. (SLS 8.5)[0m
+[0m[[0m[31merror[0m] [0m[0mExpected type was: ?[0m
+[0m[[0m[31merror[0m] [0m[0m  def receive = {[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/client/masteractor.scala:44:9: not found: value context[0m
+[0m[[0m[31merror[0m] [0m[0m        context.system.terminate[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/common/mapactor.scala:5:35: not found: type ActorRef[0m
+[0m[[0m[31merror[0m] [0m[0mclass MapActor(reduceActors: List[ActorRef]) extends Actor {[0m
+[0m[[0m[31merror[0m] [0m[0m                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/common/mapactor.scala:11:17: missing parameter type for expanded function[0m
+[0m[[0m[31merror[0m] [0m[0mThe argument types of an anonymous function must be fully known. (SLS 8.5)[0m
+[0m[[0m[31merror[0m] [0m[0mExpected type was: ?[0m
+[0m[[0m[31merror[0m] [0m[0m  def receive = {[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/common/reduceactor.scala:4:8: not found: object akka[0m
+[0m[[0m[31merror[0m] [0m[0mimport akka.actor.{Actor, ActorRef}[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/common/reduceactor.scala:5:12: object typesafe is not a member of package com[0m
+[0m[[0m[31merror[0m] [0m[0mimport com.typesafe.config.ConfigFactory[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/common/reduceactor.scala:7:27: not found: type Actor[0m
+[0m[[0m[31merror[0m] [0m[0mclass ReduceActor extends Actor {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/common/reduceactor.scala:9:26: not found: value ConfigFactory[0m
+[0m[[0m[31merror[0m] [0m[0m  var remainingMappers = ConfigFactory.load.getInt("number-mappers")[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/common/reduceactor.scala:13:17: missing parameter type for expanded function[0m
+[0m[[0m[31merror[0m] [0m[0mThe argument types of an anonymous function must be fully known. (SLS 8.5)[0m
+[0m[[0m[31merror[0m] [0m[0mExpected type was: ?[0m
+[0m[[0m[31merror[0m] [0m[0m  def receive = {[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/common/reduceactor.scala:29:17: not found: value self[0m
+[0m[[0m[31merror[0m] [0m[0m        println(self.path.toStringWithoutAddress + " : " + reduceMap)[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/common/reduceactor.scala:30:9: not found: value context[0m
+[0m[[0m[31merror[0m] [0m[0m        context.parent ! Done[0m
+[0m[[0m[31merror[0m] [0m[0m        ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/server/mapreduceserver.scala:3:12: object typesafe is not a member of package com[0m
+[0m[[0m[31merror[0m] [0m[0mimport com.typesafe.config.ConfigFactory[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/server/mapreduceserver.scala:4:8: not found: object akka[0m
+[0m[[0m[31merror[0m] [0m[0mimport akka.actor.{Actor, ActorRef, Props}[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/server/mapreduceserver.scala:10:15: not found: value ActorSystem[0m
+[0m[[0m[31merror[0m] [0m[0m	val system = ActorSystem("MapReduceServer", ConfigFactory.load.getConfig("server"));[0m
+[0m[[0m[31merror[0m] [0m[0m	             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/server/mapreduceserver.scala:10:46: not found: value ConfigFactory[0m
+[0m[[0m[31merror[0m] [0m[0m	val system = ActorSystem("MapReduceServer", ConfigFactory.load.getConfig("server"));[0m
+[0m[[0m[31merror[0m] [0m[0m	                                            ^[0m
+[0m[[0m[31merror[0m] [0m[0m41 errors found[0m
