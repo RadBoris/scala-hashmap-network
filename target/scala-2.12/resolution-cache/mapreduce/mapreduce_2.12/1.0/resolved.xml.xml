@@ -4,7 +4,7 @@
 		module="mapreduce_2.12"
 		revision="1.0"
 		status="integration"
-		publication="20190421165107"
+		publication="20190429082651"
 	>
 		<description>
 		MapReduce
@@ -33,5 +33,6 @@
 		<dependency org="org.scala-lang" name="scala-compiler" rev="2.12.8" conf="scala-tool->default,optional(default)"/>
 		<dependency org="org.scala-lang" name="scala-library" rev="2.12.8" conf="scala-tool->default,optional(default);compile->default(compile)"/>
 		<dependency org="com.typesafe.akka" name="akka-actor_2.12" rev="2.5.22" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.akka" name="akka-remote_2.12" rev="2.5.22" conf="compile->default(compile)"/>
 	</dependencies>
 </ivy-module>

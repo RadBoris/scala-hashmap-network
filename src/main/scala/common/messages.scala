@@ -1,4 +1,4 @@
-package mapreduce
+package common
 
 case class Word(word: String, title: String)
 case class Content(text: String, title: String)

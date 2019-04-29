@@ -1,1 +1,1 @@
-["mapreduce.MapReduceApplication"]
+["client.MapReduceClient","server.MapReduceApplication"]

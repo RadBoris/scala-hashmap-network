@@ -1,4 +1,4 @@
-package mapreduce
+package common
 
 import akka.actor.{Actor, ActorRef}
 

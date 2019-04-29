@@ -1,7 +1,7 @@
-[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/mapreduce/mapreduceapplication.scala:65:5: text is already defined as value text[0m
-[0m[[0m[31merror[0m] [0m[0mval text: String = Source.fromURL("http://reed.cs.depaul.edu/lperkovic/csc536/homeworks/gutenberg/pg580.txt").mkString[0m
+[0m[[0m[31merror[0m] [0m[0m/root/scala-hashmap-network/src/main/scala/client/masteractor.scala:21:5: overloaded method value apply with alternatives:[0m
+[0m[[0m[31merror[0m] [0m[0m  (protocol: String,system: String,host: Option[String],port: Option[Int])akka.actor.Address <and>[0m
+[0m[[0m[31merror[0m] [0m[0m  (protocol: String,system: String,host: String,port: Int)akka.actor.Address[0m
+[0m[[0m[31merror[0m] [0m[0m cannot be applied to (String, String, String, String)[0m
+[0m[[0m[31merror[0m] [0m[0m    Address("akka.tcp", "MapReduceServer", "127.0.0.1", "2552")[0m
 [0m[[0m[31merror[0m] [0m[0m    ^[0m
-[0m[[0m[31merror[0m] [0m[0m/root/mapreduce/src/main/scala/mapreduce/mapreduceapplication.scala:70:34: not found: value text2[0m
-[0m[[0m[31merror[0m] [0m[0mval content2: Content = Content (text2, "The Pickwick papers")[0m
-[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

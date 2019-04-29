@@ -1,4 +1,4 @@
-package mapreduce
+package common
 
 import scala.collection.mutable.{ HashMap, MultiMap, Set, MutableList}
 import akka.actor.{Actor, ActorRef}
