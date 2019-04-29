@@ -6,7 +6,7 @@ import com.typesafe.config.ConfigFactory
 
 class ReduceActor extends Actor {
   var remainingMappers = ConfigFactory.load.getInt("number-mappers")
-    var reduceMap = scala.collection.mutable.Map[String, List[String]]()
+  var reduceMap = scala.collection.mutable.Map[String, List[String]]()
 
 
   def receive = {
