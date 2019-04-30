@@ -26,11 +26,11 @@ class MasterActor extends Actor {
     case Word (word, title) => word
   }
 
-  var reduceActors = context.actorOf(RemoteRouterConfig(ConsistentHashingPool(numberReducers, hashMapping = hashMapping), addresses)
+  val reduceActors = context.actorOf(RemoteRouterConfig(ConsistentHashingPool(numberReducers, hashMapping = hashMapping), addresses)
     .props(Props[ReduceActor]))
 
 
-  var mapActors = context.actorOf(RemoteRouterConfig(RoundRobinPool(numberMappers), addresses)
+  val mapActors = context.actorOf(RemoteRouterConfig(RoundRobinPool(numberMappers), addresses)
     .props(Props(classOf[MapActor], reduceActors)))
 
   def receive = {

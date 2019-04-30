@@ -1,7 +1,3 @@
-[0m[[0m[31merror[0m] [0m[0m/root/scala-hashmap-network/src/main/scala/common/mapactor.scala:23:48: not found: value numReducers[0m
-[0m[[0m[31merror[0m] [0m[0m        var index = Math.abs((word.hashCode())%numReducers)[0m
-[0m[[0m[31merror[0m] [0m[0m                                               ^[0m
-[0m[[0m[31merror[0m] [0m[0m/root/scala-hashmap-network/src/main/scala/common/mapactor.scala:24:2: not found: value reduceActors[0m
-[0m[[0m[31merror[0m] [0m[0m	reduceActors(index) ! Word(word, title)[0m
-[0m[[0m[31merror[0m] [0m[0m	^[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[31merror[0m] [0m[0m/root/scala-hashmap-network/src/main/scala/common/mapactor.scala:10:28: ':' expected but ')' found.[0m
+[0m[[0m[31merror[0m] [0m[0mclass MapActor(reduceActors) extends Actor {[0m
+[0m[[0m[31merror[0m] [0m[0m                           ^[0m

@@ -26,7 +26,7 @@ class ReduceActor extends Actor {
       remainingMappers -= 1
       if (remainingMappers == 0) {
         println(self.path.toStringWithoutAddress + " : " + reduceMap)
-        context.parent ! Done
+        context.actorSelection("../..") ! Done
       }
   }
 }
