@@ -61,19 +61,21 @@ import common._
 
   //println(pair)
 
-val text: String = Source.fromURL("http://reed.cs.depaul.edu/lperkovic/csc536/homeworks/gutenberg/pg98.txt").mkString
+// val text: String = Source.fromURL("http://reed.cs.depaul.edu/lperkovic/csc536/homeworks/gutenberg/pg98.txt").mkString
 
-val text2: String = Source.fromURL("http://reed.cs.depaul.edu/lperkovic/csc536/homeworks/gutenberg/pg580.txt").mkString
+// val text2: String = Source.fromURL("http://reed.cs.depaul.edu/lperkovic/csc536/homeworks/gutenberg/pg580.txt").mkString
 
 
-val content: Content = Content (text, "A Tale of Two Cities")
 
-val content2: Content = Content (text2, "The Pickwick papers")
+
+val content: Content = Content ("A Tale of Two Cities", "http://reed.cs.depaul.edu/lperkovic/csc536/homeworks/gutenberg/pg98.txt")
+
+val content2: Content = Content ( "The Pickwick papers", "http://reed.cs.depaul.edu/lperkovic/csc536/homeworks/gutenberg/pg580.txt")
 
 
  master ! content
 
  master ! content2
 
-  master ! Flush
+ master ! Flush
 }
