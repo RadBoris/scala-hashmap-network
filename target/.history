@@ -304,3 +304,14 @@ compile
 run
 compile
 run
+exi 
+exit
+run
+1
+exit
+run
+exit 
+compile
+exit 
+compile
+exit

@@ -10,7 +10,6 @@ import scala.io.Source
 
 class MapActor(reduceActors: ActorRef) extends Actor {
 
-
   println(self.path)
 
   Thread sleep(2000)

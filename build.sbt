@@ -1,4 +1,5 @@
 lazy val root = (project in file(".")).
+
 settings (
   name := "MapReduce",
   version := "1.0",
@@ -8,3 +9,9 @@ settings (
   libraryDependencies += "com.typesafe.akka" %% "akka-actor" % "2.5.22",
   libraryDependencies +=  "com.typesafe.akka" %% "akka-remote" % "2.5.22"
 )
+
+  .enablePlugins(SbtPlugin)
+  .settings(
+    name := "map-reduce"
+  )
+
