@@ -12,6 +12,12 @@ class MapActor(reduceActors: ActorRef) extends Actor {
 
   println(self.path)
 
+  var e = new MapData()
+
+
+    val t = MapReducePlugin;
+       println(t)
+
   Thread sleep(2000)
 
   val STOP_WORDS_LIST = List("a", "am", "an", "and", "are", "as", "at", "be",

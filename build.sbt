@@ -11,8 +11,5 @@ settings (
   libraryDependencies +=  "com.typesafe.akka" %% "akka-remote" % "2.5.22"
 )
 
-  //.enablePlugins(org.radboris.sbt.MapReducePlugin)
-  // .settings(
-  //   name := "MapReducePlugin"
-  // )
+lazy val MapReducePlugin = (project in file("map-reduce"))
 
