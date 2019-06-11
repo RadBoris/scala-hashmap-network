@@ -1,7 +1,8 @@
+
 lazy val root = (project in file(".")).
 
 settings (
-  name := "MapReduce",
+  name := "MapReduceEngine",
   version := "1.0",
   scalaVersion := "2.12.8",
   scalacOptions in ThisBuild ++= Seq("-unchecked", "-deprecation"),
@@ -10,8 +11,8 @@ settings (
   libraryDependencies +=  "com.typesafe.akka" %% "akka-remote" % "2.5.22"
 )
 
-  .enablePlugins(SbtPlugin)
-  .settings(
-    name := "map-reduce"
-  )
+  //.enablePlugins(org.radboris.sbt.MapReducePlugin)
+  // .settings(
+  //   name := "MapReducePlugin"
+  // )
 
