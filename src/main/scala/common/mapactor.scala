@@ -10,31 +10,17 @@ import scala.io.Source
 import org.radboris.sbt._
 
 class MapActor(reduceActors: ActorRef) extends Actor {
-
-  println(self.path)
-
   Thread sleep(2000)
-
-  var t = ReduceData
-
-  println(t.toString)
-
-  val STOP_WORDS_LIST = List("a", "am", "an", "and", "are", "as", "at", "be",
-    "do", "go", "if", "in", "is", "it", "of", "on", "the", "to")
 
   def receive = {
     case Content (title, url) =>
-      process(title, url)
-    case Flush =>
-        reduceActors ! Broadcast(Flush)
-  }
+      val content: String = Source.fromURL(url).mkString
 
-  def process(title: String, url: String) = {
-    val content: String = Source.fromURL(url).mkString
-    content.replaceAll("""[\p{Punct}&&[^.]]""", "")
-    for (word <- content.split("[\\p{Punct}\\s]+"))
-      if ((!STOP_WORDS_LIST.contains(word)) && word.exists(_.isUpper)) {
-	       reduceActors ! Word(word, title)
-      }
+      content.replaceAll("""[\p{Punct}&&[^.]]""", "")
+
+      // the plugin mapper
+      MapData.mapper(title, content, reduceActors)
+      case Flush =>
+        reduceActors ! Broadcast(Flush)
   }
 }

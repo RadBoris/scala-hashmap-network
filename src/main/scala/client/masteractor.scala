@@ -6,7 +6,6 @@ import akka.routing.ConsistentHashingRouter.ConsistentHashMapping
 import akka.remote.routing.{RemoteRouterConfig}
 
 import com.typesafe.config.ConfigFactory
-
 import common._
 
 class MasterActor extends Actor {
@@ -20,7 +19,6 @@ class MasterActor extends Actor {
     Address ("akka", "MapReduceClient"),
     Address("akka.tcp", "MapReduceServer", "127.0.0.1", 2552)
   )
-
 
   def hashMapping: ConsistentHashMapping = {
     case Word (word, title) => word

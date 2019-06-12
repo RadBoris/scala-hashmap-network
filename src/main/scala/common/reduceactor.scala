@@ -3,11 +3,12 @@ package common
 import scala.collection.mutable.{ HashMap, MultiMap, Set, MutableList}
 import akka.actor.{Actor, ActorRef}
 import com.typesafe.config.ConfigFactory
+import org.radboris.sbt._
+
 
 class ReduceActor extends Actor {
   var remainingMappers = ConfigFactory.load.getInt("number-mappers")
   var reduceMap = scala.collection.mutable.Map[String, List[String]]()
-
 
   def receive = {
 
