@@ -7,18 +7,17 @@ import akka.remote.RemoteActorRef
 import akka.routing.Broadcast
 import akka.remote.RemoteScope
 import scala.io.Source
+import org.radboris.sbt._
 
 class MapActor(reduceActors: ActorRef) extends Actor {
 
   println(self.path)
 
-  var e = new MapData()
-
-
-    val t = MapReducePlugin;
-       println(t)
-
   Thread sleep(2000)
+
+  var t = ReduceData
+
+  println(t.toString)
 
   val STOP_WORDS_LIST = List("a", "am", "an", "and", "are", "as", "at", "be",
     "do", "go", "if", "in", "is", "it", "of", "on", "the", "to")

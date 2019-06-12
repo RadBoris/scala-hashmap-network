@@ -1,7 +1,0 @@
-[0m[[0m[31merror[0m] [0m[0m/root/scala-hashmap-network/src/main/scala/common/mapactor.scala:15:15: not found: type MapData[0m
-[0m[[0m[31merror[0m] [0m[0m  var e = new MapData()[0m
-[0m[[0m[31merror[0m] [0m[0m              ^[0m
-[0m[[0m[31merror[0m] [0m[0m/root/scala-hashmap-network/src/main/scala/common/mapactor.scala:18:13: not found: value MapReducePlugin[0m
-[0m[[0m[31merror[0m] [0m[0m    val t = MapReducePlugin;[0m
-[0m[[0m[31merror[0m] [0m[0m            ^[0m
-[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m

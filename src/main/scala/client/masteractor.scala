@@ -5,7 +5,6 @@ import akka.routing.{Broadcast, RoundRobinPool, ConsistentHashingPool}
 import akka.routing.ConsistentHashingRouter.ConsistentHashMapping
 import akka.remote.routing.{RemoteRouterConfig}
 
-
 import com.typesafe.config.ConfigFactory
 
 import common._
