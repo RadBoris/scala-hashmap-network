@@ -9,11 +9,8 @@ import common._
 	val system = ActorSystem("MapReduceClient", ConfigFactory.load.getConfig("client"));
   	val master = system.actorOf(Props[MasterActor], name = "master")
 
-	val content: Content = Content ("A Tale of Two Cities", "http://reed.cs.depaul.edu/lperkovic/csc536/homeworks/gutenberg/pg98.txt")
-
-	val content2: Content = Content ( "The Pickwick papers", "http://reed.cs.depaul.edu/lperkovic/csc536/homeworks/gutenberg/pg580.txt")
+	val content: Content = Content ("Title", "http://159.89.129.146/test/newtext.txt")
 
 	master ! content
-	master ! content2
 	master ! Flush
 }
